@@ -3,18 +3,108 @@ body{
      color: white;
 }
 
-input{
-    background-color: transparent !important ;
-    color: white;
-}
-
-input::placeholder{
-    color: white;
-}
-
 .message_content:nth-child(2n){
     background-color: gray;
     border-radius: 12px;
     padding: 20px;
     margin: 20px;
+}
+
+.add-note-container {
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.add-note-container .form-control {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.add-note-container .form-control:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border-color: #0d6efd;
+    box-shadow: none;
+}
+
+.add-note-container .form-control::placeholder {
+    color: #ccc;
+}
+
+.note-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.note-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.note-description {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    flex-grow: 1; 
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.note-actions {
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.note-card:hover .note-actions {
+    opacity: 1; 
+}
+
+.btn-icon {
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.btn-icon:hover {
+    background: #dc3545; 
+}
+
+.empty-state-message {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
 }
