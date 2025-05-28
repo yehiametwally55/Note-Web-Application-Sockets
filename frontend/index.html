@@ -5,23 +5,26 @@
     <title>Socket.IO chat</title>
   </head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="css/styles.css">
   <body>
-    <h1 class="">Sockets</h1>
 
-    <div class="container">
-      <div class="w-75 mx-auto mb-5">
-        <label for="">Note title</label>
-        <input id="noteTitle" type="text" class="form-control mb-5">
-        <label for="">Note description</label>
-        <textarea id="notedesc" type="text" class="form-control mb-5"></textarea>
-        <button onclick="addNote()" class="btn btn-info w-100">add note</button>
-      </div>
-   
+    <div class="container py-5">
+    <div class="add-note-container mx-auto mb-5">
+        <h2 class="text-white mb-4 text-center">Add a New Note</h2>
+        <div class="form-group mb-3">
+            <input id="noteTitle" type="text" class="form-control" placeholder="Note Title">
+        </div>
+        <div class="form-group mb-4">
+            <textarea id="notedesc" class="form-control" placeholder="Note Description..." rows="4"></textarea>
+        </div>
+        <button onclick="addNote()" class="btn btn-primary w-100 py-2">Add Note</button>
+    </div>
 
     <div id="rows" class="row">
-     
+        
     </div>
+
   </div>
 
     <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
