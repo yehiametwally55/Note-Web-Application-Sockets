@@ -1,2 +1,2 @@
-Developed a Notes web application for Creating and deleting Notes using websockets with Modern and clean UI. Stack NodeJS Websockets and MongoDB for backend and HTML, bootstrap and javascript for front end.
+Developed a full-stack, real-time notes application using Node.js and Socket.IO for the backend, with all notes persisted in a MongoDB database.  The application features instant note creation and deletion, with all changes broadcast via WebSockets to connected clients for a live, collaborative experience. The responsive front-end is built with van
 ![Screenshot 2025-06-03 152915](https://github.com/user-attachments/assets/cf025ec7-271a-444f-a39e-5878a89526d5)
